@@ -35,13 +35,20 @@ body{
     border-radius: .75rem;
 }
 
+/* Image-Related Selectors */
+
 .img-container{
     position: relative;
     display: inline-block;
+    background-color: var(--accent);
+    opacity: .8;
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
 }
 
 .desktop-img{
     display: none;
+    mix-blend-mode: multiply;
 }
 
 .mobile-img{
@@ -49,9 +56,14 @@ body{
     height: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    mix-blend-mode: multiply;
 }
 
-.img-container:after{
+/* Psuedo class applied to create image tint overlay 
+REMOVED -- replaced with adding background color and opacity to .img-container and then "nmix-blend-mode: multiply" to the individual images
+*/
+
+/* .img-container:after{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -63,7 +75,7 @@ body{
     opacity: .7;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-}
+} */
 
 h1{
     margin-top: 2rem;
@@ -99,7 +111,6 @@ ul{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
 }
 
 li{
@@ -122,9 +133,10 @@ li{
 }
 footer{ 
     position: fixed;
+    margin-top: 10%;
     width: 100%;
     bottom: 0px;
-    font-size: 11px; text-align: center; 
+    font-size: 1rem; text-align: center; 
 
 }
 
@@ -153,10 +165,8 @@ footer a{
 }
 
 .desktop-img{
-    display: inline-block;
+    display: block;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
     border-top-right-radius: .75rem;
     border-bottom-right-radius: .75rem;
 }
@@ -203,6 +213,3 @@ li{
 }
 
 }
-
-
-  
